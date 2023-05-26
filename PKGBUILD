@@ -1,10 +1,11 @@
 # Maintainer: David K david.dk949@gmail.com
-pkgname=vimv
+_pkgname=vimv
+pkgname="${_pkgname}-949sd"
 pkgver=unknown
 pkgrel=0
 pkgdesc="terminal-based file rename and removal utility"
 arch=('any')
-url="https://github.com/dk949/$pkgname"
+url="https://github.com/dk949/$_pkgname"
 license=('MIT')
 provides=(
     'vimv'
@@ -14,7 +15,7 @@ conflicts=(
     'vimv-git'
     'virm-git'
 )
-source=("git+$url")
+source=("$pkgname::git+$url")
 md5sums=() #autofill using updpkgsums
 sha256sums=('SKIP')
 
